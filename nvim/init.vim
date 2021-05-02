@@ -25,7 +25,17 @@ Plug 'tpope/vim-fugitive'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'dense-analysis/ale'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained", 
+  highlight = {
+    enable = true,
+  },
+}
+EOF
 
 let g:tokyonight_style = 'night'
 let g:tokyonight_enable_italic = 1
