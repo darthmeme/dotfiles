@@ -4,19 +4,21 @@ set expandtab
 set smartindent
 set hidden
 set nu
+set rnu
 set signcolumn=yes
 set termguicolors
 set scrolloff=10
 set noswapfile
 set nobackup
 set nohlsearch
+set completeopt=menuone,noselect
 
 call plug#begin('~/.vim/plugged')
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-compe'
+Plug 'hrsh7th/nvim-compe', { 'do': 'yarn global add typescript typescript-language-server vls'  }
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'phaazon/hop.nvim'
 Plug 'itchyny/lightline.vim'
@@ -24,7 +26,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'tpope/vim-fugitive'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
-Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale', { 'do': 'yarn global add eslint_d' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
@@ -43,7 +45,7 @@ let g:tokyonight_enable_italic = 1
 colorscheme tokyonight
 
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'tokyonight',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
