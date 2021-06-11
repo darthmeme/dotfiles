@@ -16,3 +16,5 @@ inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 nnoremap <leader>gd <cmd>ALEGoToDefinition<cr>
 nnoremap <leader>gr <cmd>ALERename<cr>
 nnoremap <leader>t <cmd>NERDTreeToggle<cr>
+cnoremap W w
+cnoremap Q q

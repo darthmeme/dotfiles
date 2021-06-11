@@ -12,6 +12,8 @@ set noswapfile
 set nobackup
 set nohlsearch
 set completeopt=menuone,noselect
+set ignorecase
+set smartcase
 
 hi LspDiagnosticsVirtualTextError guifg=red gui=bold
 hi LspDiagnosticsVirtualTextWarning guifg=orange gui=bold
