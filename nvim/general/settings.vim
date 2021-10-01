@@ -4,7 +4,7 @@ set expandtab
 set smartindent
 set hidden
 set nu
-set rnu
+" set rnu
 set signcolumn=yes
 set termguicolors
 set scrolloff=10
@@ -14,9 +14,9 @@ set nohlsearch
 set completeopt=menuone,noselect
 set ignorecase
 set smartcase
+set nowrap 
 
 hi LspDiagnosticsVirtualTextError guifg=red gui=bold
 hi LspDiagnosticsVirtualTextWarning guifg=orange gui=bold
 hi LspDiagnosticsVirtualTextInformation guifg=yellow gui=bold
 hi LspDiagnosticsVirtualTextHint guifg=green gui=bold
-

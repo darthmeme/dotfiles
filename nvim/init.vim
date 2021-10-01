@@ -9,3 +9,7 @@ source $HOME/.config/nvim/plugins/tokyonight-vim.vim
 source $HOME/.config/nvim/plugins/lightline.vim
 source $HOME/.config/nvim/plugins/ale.vim
 source $HOME/.config/nvim/plugins/nvim-treesitter.vim
+source $HOME/.config/nvim/plugins/hardmode.vim
+source $HOME/.config/nvim/plugins/floaterm.vim
+source $HOME/.config/nvim/plugins/telescope.vim
+source $HOME/.config/nvim/plugins/nvim-web-devicons.vim
