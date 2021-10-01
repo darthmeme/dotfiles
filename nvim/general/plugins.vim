@@ -18,4 +18,5 @@ Plug 'wikitopian/hardmode'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'jiangmiao/auto-pairs'
 Plug 'unblevable/quick-scope'
+Plug 'leafOfTree/vim-vue-plugin'
 call plug#end()
