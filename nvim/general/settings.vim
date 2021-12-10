@@ -4,14 +4,13 @@ set expandtab
 set smartindent
 set hidden
 set nu
-" set rnu
-set signcolumn=yes
+set signcolumn=no
 set termguicolors
 set scrolloff=10
 set noswapfile
 set nobackup
 set nohlsearch
-set completeopt=menuone,noselect
+set completeopt=menu,menuone,noselect
 set ignorecase
 set smartcase
 set nowrap 
