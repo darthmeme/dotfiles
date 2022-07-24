@@ -1,5 +1,5 @@
 lua <<EOF
-require'telescope'.setup {
+require('telescope').setup {
   defaults = {
     color_devicons = true
   }

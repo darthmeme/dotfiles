@@ -1,14 +1,11 @@
-" General settings
-source $HOME/.config/nvim/general/plugins.vim
-source $HOME/.config/nvim/general/settings.vim
-source $HOME/.config/nvim/general/maps.vim
-source $HOME/.config/nvim/general/theme.vim
-" Plugins
-source $HOME/.config/nvim/plugins/nvim-cmp.vim
+source $HOME/.config/nvim/settings.vim
+source $HOME/.config/nvim/mappings.vim
+source $HOME/.config/nvim/plugins.vim
+source $HOME/.config/nvim/theme.vim
+
 source $HOME/.config/nvim/plugins/nvim-lspconfig.vim
-source $HOME/.config/nvim/plugins/lightline.vim
-source $HOME/.config/nvim/plugins/nvim-treesitter.vim
-source $HOME/.config/nvim/plugins/hardmode.vim
+source $HOME/.config/nvim/plugins/vim-floaterm.vim
 source $HOME/.config/nvim/plugins/floaterm.vim
+source $HOME/.config/nvim/plugins/nvim-treesitter.vim
 source $HOME/.config/nvim/plugins/telescope.vim
-source $HOME/.config/nvim/plugins/nvim-web-devicons.vim
+source $HOME/.config/nvim/plugins/coq_nvim.vim

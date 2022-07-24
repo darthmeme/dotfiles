@@ -15,7 +15,3 @@ set ignorecase
 set smartcase
 set nowrap 
 
-hi LspDiagnosticsVirtualTextError guifg=red gui=bold
-hi LspDiagnosticsVirtualTextWarning guifg=orange gui=bold
-hi LspDiagnosticsVirtualTextInformation guifg=yellow gui=bold
-hi LspDiagnosticsVirtualTextHint guifg=green gui=bold
