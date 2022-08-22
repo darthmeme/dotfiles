@@ -3,7 +3,7 @@ set shiftwidth=2
 set expandtab
 set smartindent
 set hidden
-set nu
+set rnu
 set signcolumn=no
 set termguicolors
 set scrolloff=10
@@ -14,4 +14,3 @@ set completeopt=menu,menuone,noselect
 set ignorecase
 set smartcase
 set nowrap 
-
