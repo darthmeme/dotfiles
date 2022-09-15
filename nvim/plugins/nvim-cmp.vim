@@ -43,9 +43,6 @@ lua <<EOF
   require('lspconfig')['tsserver'].setup {
     capabilities = capabilities
   }
-  require('lspconfig')['eslint'].setup {
-    capabilities = capabilities
-  }
   require('lspconfig')['volar'].setup {
     capabilities = capabilities
   }
