@@ -1,5 +1,4 @@
-let g:sonokai_diagnostic_virtual_text = "colored"
-colorscheme sonokai
+colorscheme OceanicNext
 
 hi Normal guibg=NONE ctermbg=NONE
 hi LineNr guibg=NONE ctermbg=NONE
