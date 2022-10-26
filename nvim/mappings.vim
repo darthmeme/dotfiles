@@ -10,3 +10,4 @@ vnoremap <C-r> "hy:%s/<C-r>h//g<left><left>
 nnoremap <leader>i <cmd>:e ~/.config/nvim/init.vim<cr>
 nnoremap gd <cmd>lua vim.lsp.buf.definition()<cr>
 nnoremap K <cmd>lua vim.lsp.buf.hover()<cr>
+nnoremap <leader>c <cmd>bw<cr>

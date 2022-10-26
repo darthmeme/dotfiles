@@ -8,6 +8,11 @@ local on_attach = function(client, bufnr)
   local opts = { noremap = true, silent = true }
 end
 
+nvim_lsp.tsserver.setup {
+  on_attach = on_attach,
+  filetypes = { "typescript" }
+}
+
 nvim_lsp.eslint.setup{
   on_attach = on_attach,
   filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue", "graphql" }
@@ -15,7 +20,6 @@ nvim_lsp.eslint.setup{
 
 nvim_lsp.volar.setup{
   on_attach = on_attach,
-  filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
 }
 
 nvim_lsp.graphql.setup{
