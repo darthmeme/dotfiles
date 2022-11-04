@@ -1,8 +1,14 @@
-local colorscheme = "default"
+local colorscheme = "tokyonight"
 
-local colorscheme_status, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+local _, status = pcall(require, colorscheme)
 
-if not colorscheme_status then
+if not status then
   print("Colorscheme " .. colorscheme .. " not found")
   return
 end
+
+require(colorscheme).setup({
+  transparent = true
+})
+
+vim.cmd('colorscheme ' .. colorscheme)
