@@ -1,14 +1,18 @@
 local colorscheme = "tokyonight"
 
-local _, status = pcall(require, colorscheme)
-
-if not status then
-  print("Colorscheme " .. colorscheme .. " not found")
-  return
-end
-
 require(colorscheme).setup({
-  transparent = true
+  style = 'moon',
+  transparent = true,
+  on_highlights = function (highlights)
+    highlights.LineNr = {
+      fg = '#65737e'
+    }
+  end
 })
 
-vim.cmd('colorscheme ' .. colorscheme)
+local _, colorscheme_status = pcall(vim.cmd, 'colorscheme ' .. colorscheme)
+
+if not colorscheme_status then
+  print("colorscheme " .. colorscheme .. " not found")
+  return
+end
