@@ -8,6 +8,7 @@ local function init()
   require('blaze.core.plugins.mason')
   require('blaze.core.plugins.nvim-lspconfig')
   require('blaze.core.plugins.nvim-cmp')
+  require('blaze.core.plugins.toggleterm')
 end
 
 return {

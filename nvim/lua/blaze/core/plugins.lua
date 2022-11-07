@@ -60,6 +60,8 @@ return packer.startup(
 
     use 'folke/tokyonight.nvim'
 
+    use 'akinsho/toggleterm.nvim'
+
     if packer_bootstrap then
       require('packer').sync()
     end

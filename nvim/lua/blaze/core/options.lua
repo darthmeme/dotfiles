@@ -4,7 +4,6 @@ local options = {
   shiftwidth = 2,
   expandtab = true,
   hidden = true,
-  number = true,
   relativenumber = true,
   termguicolors = true,
   scrolloff = 10,
@@ -14,7 +13,11 @@ local options = {
   ignorecase = true,
   smartcase = true,
   wrap = false,
-  mouse = ''
+  mouse = '',
+  signcolumn = 'no',
+  updatetime = 250,
+  laststatus = 0,
+  ch = 0
 }
 
 for key, value in pairs(options) do
