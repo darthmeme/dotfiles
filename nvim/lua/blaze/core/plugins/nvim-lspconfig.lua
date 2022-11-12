@@ -8,7 +8,7 @@ local on_attach = function (client, bufnr)
   local setmap = vim.api.nvim_set_keymap
   local options = { noremap = true, silent = true, buffer = bufnr }
 
-  vim.keymap.set('n', 'gd', vim.lsp.buf.declaration, options)
+  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, options)
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, options)
 end
 

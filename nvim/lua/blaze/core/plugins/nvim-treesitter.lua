@@ -11,5 +11,11 @@ treesitter.setup({
   },
   indent = {
     enable = true
+  },
+  matchup = {
+    enable = true
+  },
+  autotag = {
+    enable = true
   }
 })

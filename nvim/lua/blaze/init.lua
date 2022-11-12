@@ -9,6 +9,7 @@ local function init()
   require('blaze.core.plugins.nvim-lspconfig')
   require('blaze.core.plugins.nvim-cmp')
   require('blaze.core.plugins.toggleterm')
+  require('blaze.core.plugins.nvim-autopairs')
 end
 
 return {

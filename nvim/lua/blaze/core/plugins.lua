@@ -58,9 +58,19 @@ return packer.startup(
     use 'L3MON4D3/LuaSnip'
     use 'rafamadriz/friendly-snippets'
 
+    -- Theme
     use 'folke/tokyonight.nvim'
 
+    -- Floating terminals
     use 'akinsho/toggleterm.nvim'
+
+    -- QOL
+    use 'andymass/vim-matchup'
+
+    use 'tpope/vim-surround'
+
+    use 'windwp/nvim-autopairs'
+    use 'windwp/nvim-ts-autotag'
 
     if packer_bootstrap then
       require('packer').sync()
