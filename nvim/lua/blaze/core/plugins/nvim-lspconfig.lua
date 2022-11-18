@@ -43,6 +43,10 @@ lspconfig['eslint'].setup({
   on_attach = on_attach
 })
 
+lspconfig['rust_analyzer'].setup({
+  on_attach = on_attach
+})
+
 vim.cmd([[
   augroup eslint_format_on_save
     autocmd!
