@@ -61,9 +61,6 @@ return packer.startup(
     -- Theme
     use 'folke/tokyonight.nvim'
 
-    -- Floating terminals
-    use 'akinsho/toggleterm.nvim'
-
     -- QOL
     use 'andymass/vim-matchup'
 
