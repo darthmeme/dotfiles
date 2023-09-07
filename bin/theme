@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+COMMAND=$1
+THEME=$2
+
+if [ $COMMAND = "add" ]; then
+  wpg -a $HOME/.config/wallpapers/$THEME.jpg
+elif [ $COMMAND = "set" ]; then
+  wpg -s "$THEME.jpg"
+elif [ $COMMAND = "delete" ]; then
+  wpg -d "$THEME.jpg"
+fi
+
+kill -SIGUSR1 $(pidof kitty)
