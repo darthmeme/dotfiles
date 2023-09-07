@@ -7,3 +7,4 @@ set -Ux EDITOR nvim
 fish_add_path ~/.config/bin
 
 zoxide init fish | source
+starship init fish | source
