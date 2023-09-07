@@ -6,6 +6,7 @@ set -Ux EDITOR nvim
 
 bind -m insert \cc kill-whole-line repaint
 bind -M insert \cc kill-whole-line
+bind -M insert \e\[103\;9u lazygit
 
 fish_add_path ~/.config/bin
 
