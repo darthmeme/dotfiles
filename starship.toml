@@ -1,5 +1,8 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+[package]
+disabled = true
+
 [character]
 success_symbol = "[\uf054](white)"
 vicmd_symbol = "[\ue62b](white)"
@@ -12,4 +15,7 @@ disabled = true
 format = '\($branch\)'
 
 [cmd_duration]
+disabled = true
+
+[nodejs]
 disabled = true
