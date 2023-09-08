@@ -1,16 +1,9 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-right_format = "$time"
-
 [character]
 success_symbol = "[\uf054](white)"
 vicmd_symbol = "[\ue62b](white)"
 error_symbol = "[\uf054](white)"
-
-[time]
-disabled = false
-format = "$time"
-time_format = "%a%e %b %R"
 
 [git_status]
 disabled = true
