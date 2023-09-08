@@ -2,6 +2,7 @@ eval (/opt/homebrew/bin/brew shellenv)
 
 set -U fish_greeting
 set -U fish_key_bindings fish_vi_key_bindings
+set -U nvm_default_version 18
 set -Ux EDITOR nvim
 
 bind -m insert \cc kill-whole-line repaint
