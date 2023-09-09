@@ -18,5 +18,14 @@ return {
     keymap.set("n", "<leader>ss", "<cmd>Telescope find_files<cr>")
     keymap.set("n", "<leader>sw", "<cmd>Telescope live_grep<cr>")
     keymap.set("n", "<leader>sb", "<cmd>Telescope buffers<cr>")
+
+    telescope.setup({
+      defaults = {
+        layout_config = {
+          prompt_position = 'top'
+        },
+        sorting_strategy = 'ascending'
+      }
+    })
   end
 }
