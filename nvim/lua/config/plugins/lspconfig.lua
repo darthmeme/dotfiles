@@ -13,7 +13,7 @@ return {
     local on_attach = function(client, bufnr)
       opts.buffer = bufnr
 
-      keymap.set("n", "gd", vim.lsp.buf.declaration, opts)
+      keymap.set("n", "gd", vim.lsp.buf.definition, opts)
       keymap.set("n", "K", vim.lsp.buf.hover, opts)
       keymap.set("n", "L", vim.diagnostic.open_float, opts)
     end
