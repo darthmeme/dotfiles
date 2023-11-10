@@ -10,6 +10,7 @@ bind -M insert \cc kill-whole-line
 bind -M insert \cBg lazygit
 
 fish_add_path ~/.config/bin
+fish_add_path ~/.config/tmux/plugins/t-smart-tmux-session-manager/bin
 
 zoxide init fish | source
 starship init fish | source
