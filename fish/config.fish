@@ -11,6 +11,7 @@ bind -M insert \cBg lazygit
 
 fish_add_path ~/.config/bin
 fish_add_path ~/.config/tmux/plugins/t-smart-tmux-session-manager/bin
+fish_add_path /Users/akiralaine/Library/Python/3.11/bin/
 
 zoxide init fish | source
 starship init fish | source

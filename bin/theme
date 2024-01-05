@@ -7,6 +7,7 @@ if [ $COMMAND = "add" ]; then
   wpg -a $HOME/.config/wallpapers/$THEME.jpg
 elif [ $COMMAND = "set" ]; then
   wpg -s "$THEME.jpg"
+  wal -i "$HOME/.config/wallpapers/$THEME.jpg" -q
 elif [ $COMMAND = "delete" ]; then
   wpg -d "$THEME.jpg"
 fi
