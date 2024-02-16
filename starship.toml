@@ -31,3 +31,9 @@ disabled = true
 
 [gcloud]
 disabled = true
+
+[gradle]
+disabled = true
+
+[java]
+disabled = true
