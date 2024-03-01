@@ -67,7 +67,8 @@ return {
 
     lspconfig["graphql"].setup({
       capabilities = capabilities,
-      on_attach = on_attach
+      on_attach = on_attach,
+      filetypes = { "graphql", "typescriptreact", "javascriptreact", "vue" }
     })
 
 
@@ -78,6 +79,12 @@ return {
       on_new_config = function(new_config, new_root_dir)
         new_config.init_options.typescript.tsdk = get_typescript_server_path(new_root_dir)
       end,
+      handlers = {
+        ["textDocument/publishDiagnostics"] = function(err, result, ctx, config)
+          require("ts-error-translator").translate_diagnostics(err, result, ctx, config)
+          vim.lsp.diagnostic.on_publish_diagnostics(err, result, ctx, config)
+        end
+      }
     })
 
     lspconfig["eslint"].setup({
