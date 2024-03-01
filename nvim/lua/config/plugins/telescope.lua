@@ -25,6 +25,11 @@ return {
           prompt_position = 'top'
         },
         sorting_strategy = 'ascending'
+      },
+      pickers = {
+        find_files = {
+          find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" }
+        }
       }
     })
   end
