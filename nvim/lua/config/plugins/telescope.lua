@@ -18,6 +18,7 @@ return {
     keymap.set("n", "<leader>ss", "<cmd>Telescope find_files<cr>")
     keymap.set("n", "<leader>sw", "<cmd>Telescope live_grep<cr>")
     keymap.set("n", "<leader>sb", "<cmd>Telescope buffers<cr>")
+    keymap.set("n", "<leader>gr", "<cmd>Telescope lsp_references<cr>")
 
     telescope.setup({
       defaults = {
