@@ -38,6 +38,19 @@ return {
     end
 
     local mason_registry = require('mason-registry')
+    local function find_files_upwards(starting_dir, target_filenames)
+      local function checker(dir)
+        for _, filename in ipairs(target_filenames) do
+          local target_path = util.path.join(dir, filename)
+          if util.path.exists(target_path) then
+            return target_path
+          end
+        end
+      end
+
+      return util.search_ancestors(starting_dir, checker)
+    end
+
     local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path() .. '/node_modules/@vue/language-server'
 
     lspconfig["html"].setup({
@@ -102,6 +115,28 @@ return {
     })
 
     lspconfig["eslint"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      root_dir = function(fname)
+        local root_file = {
+          '.eslintrc',
+          '.eslintrc.js',
+          '.eslintrc.cjs',
+          '.eslintrc.yaml',
+          '.eslintrc.yml',
+          '.eslintrc.json',
+          'eslint.config.js',
+          'eslint.config.mjs',
+          'eslint.config.cjs',
+          'eslint.config.ts',
+          'eslint.config.mts',
+          'eslint.config.cts',
+        }
+
+        return find_files_upwards(fname, root_file)
+      end
+    })
+
       capabilities = capabilities,
       on_attach = on_attach
     })
