@@ -38,6 +38,7 @@ return {
     end
 
     local mason_registry = require('mason-registry')
+
     local function find_files_upwards(starting_dir, target_filenames)
       local function checker(dir)
         for _, filename in ipairs(target_filenames) do
@@ -58,7 +59,14 @@ return {
       on_attach = on_attach
     })
 
-    lspconfig["cssls"].setup({
+    lspconfig["astro"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      on_new_config = function(new_config, new_root_dir)
+        new_config.init_options.typescript.tsdk = get_typescript_server_path(new_root_dir)
+      end,
+    })
+
       capabilities = capabilities,
       on_attach = on_attach
     })
@@ -141,10 +149,11 @@ return {
       on_attach = on_attach
     })
 
+
     vim.cmd([[
       augroup eslint_format_on_save
       autocmd!
-      autocmd BufWritePost *.js,*.ts,*.vue,*.graphql EslintFixAll
+      autocmd BufWritePost *.js,*.ts,*.mts,*.vue,*.graphql,*.astro EslintFixAll
       augroup end
     ]])
 
