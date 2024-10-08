@@ -67,10 +67,6 @@ return {
       end,
     })
 
-      capabilities = capabilities,
-      on_attach = on_attach
-    })
-
     lspconfig["tailwindcss"].setup({
       capabilities = capabilities,
       on_attach = on_attach
@@ -144,11 +140,6 @@ return {
         return find_files_upwards(fname, root_file)
       end
     })
-
-      capabilities = capabilities,
-      on_attach = on_attach
-    })
-
 
     vim.cmd([[
       augroup eslint_format_on_save
