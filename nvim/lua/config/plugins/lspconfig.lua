@@ -90,7 +90,7 @@ return {
       filetypes = { "graphql", "typescriptreact", "javascriptreact", "vue" }
     })
 
-    lspconfig['tsserver'].setup {
+    lspconfig['ts_ls'].setup {
       init_options = {
         plugins = {
           {
