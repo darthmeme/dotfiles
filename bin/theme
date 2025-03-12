@@ -4,12 +4,12 @@ COMMAND=$1
 THEME=$2
 
 if [ $COMMAND = "add" ]; then
-  wpg -a $HOME/.config/wallpapers/$THEME.jpg
+  wpg -a $HOME/.config/wallpapers/$THEME
 elif [ $COMMAND = "set" ]; then
-  wpg -s "$THEME.jpg"
-  wal -i "$HOME/.config/wallpapers/$THEME.jpg" -q
+  wpg -s "$THEME"
+  wal -i "$HOME/.config/wallpapers/$THEME" -q
 elif [ $COMMAND = "delete" ]; then
-  wpg -d "$THEME.jpg"
+  wpg -d "$THEME"
 fi
 
 kill -SIGUSR1 $(pidof kitty)
