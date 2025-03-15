@@ -11,6 +11,7 @@ return {
 
     mason_lspconfig.setup({
       ensure_installed = {
+        "astro",
         "ts_ls",
         "html",
         "cssls",
@@ -18,7 +19,8 @@ return {
         "lua_ls",
         "graphql",
         "volar",
-        "eslint"
+        "eslint",
+        "prettierd"
       }
     })
   end
