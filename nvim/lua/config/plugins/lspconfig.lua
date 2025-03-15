@@ -141,24 +141,9 @@ return {
       end
     })
 
-    vim.api.nvim_create_augroup('eslint_format_on_save', {
-      clear = true
-    })
-
     vim.api.nvim_create_autocmd('BufWritePost', {
-      group = 'eslint_format_on_save',
-      pattern = '*.js,*.mjs,*.ts,*.mts,*.vue,*.graphql',
-      command = 'EslintFixAll'
-    })
-
-    vim.api.nvim_create_augroup('lsp_format_on_save', {
-      clear = true
-    })
-
-    vim.api.nvim_create_autocmd('BufWritePost', {
-      group = 'lsp_format_on_save',
-      pattern = '*.astro',
-      command = ':lua vim.lsp.buf.format()'
+      pattern = '*',
+      command = 'FormatWrite'
     })
 
     -- Diagnostics
